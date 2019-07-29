@@ -18,3 +18,14 @@ Once the kernel is set up, it begins the systemd initialization system.
 systemd takes over and continues to mount the host’s file systems and start services.
 
 #########################################################################################################
+
+
+Stat code
+
+Z -> zombie process
+
+please share your finding regarding all such status here
+
+
+#########################################################################################################
+ 
