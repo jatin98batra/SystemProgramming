@@ -3,7 +3,7 @@
 #include<unistd.h>
 int main()
 {
-
+  
 	
 	pid_t pid;
 	int pipeFd[2];
