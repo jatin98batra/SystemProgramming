@@ -19,13 +19,25 @@ systemd takes over and continues to mount the host’s file systems and start se
 
 #########################################################################################################
 
+Status Code
 
-Stat code
+Z-> zombie process
 
-Z -> zombie process
+Please add you reseach on this topic  here
+#########################################################################################################
 
-please share your finding regarding all such status here
+How a priority of a process is set
 
+The OS determines the priority of a process based on a 'nice' value, which by default is 0 and ranges between -20(most favourable ) to 19(least favourable) .
+Well-beahved program are termed as nice, these are those programs that perform short burst of work and pause for input rather than continually hog the processor by doing some calcutions or asking for some resources.
+Program which run without pausing get the lower priority and program that pauses are rewared with higher priority.
+
+
+The priority of a program can be adjusted by using the following: 
+
+1. nice -> it increases the nice value by 10 and hence lowering the priority of the program 
+	Command : nice <program name>
+2. renice -> it assigns the new nice vaue to the program.
+	Comand : renice <new value(-20 to 19)> <PID> 
 
 #########################################################################################################
- 
