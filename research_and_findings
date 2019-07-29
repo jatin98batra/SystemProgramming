@@ -41,3 +41,14 @@ The priority of a program can be adjusted by using the following:
 	Comand : renice <new value(-20 to 19)> <PID> 
 
 #########################################################################################################
+
+Scheduling aglo used by linux
+
+By default linux uses CFS(completely fair share) scheduler.
+
+It divided the physical power of the cpu eqaully among the running process i.e., if 2 process are runningat a time work done by both will be same.
+Red black tree data structure is used for implementing this.
+
+DOUBT--> one source says, it gives cycle to process with highest cpu time first whereas as other says it gives cycle to process with lower cpu time required first.
+
+#########################################################################################################
