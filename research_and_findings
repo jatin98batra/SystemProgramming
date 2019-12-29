@@ -1,0 +1,54 @@
+#########################################################################################################
+Please add your researchs and findings here under the name of the topics and use '#' to seperate different topics as shown.
+#########################################################################################################
+
+The Linux Boot Process and systemd
+
+
+To better understand what is meant by an initialization system, this section provides a high-level overview of the Linux boot process.
+
+Linux requires an initialization system during its boot and startup process. At the end of the boot process, the Linux kernel loads systemd and passes control over to it and the startup process begins. During this step, the kernel initializes the first user space process, the systemd init process with process ID 1, and then goes idle unless called again. systemd prepares the user space and brings the Linux host into an operational state by starting all other processes on the system.
+
+Below is a simplified overview of the entire Linux boot and startup process:
+
+The system powers up. The BIOS does minimal hardware initialization and hands over control to the boot loader.
+The boot loader calls the kernel.
+The kernel loads an initial RAM disk that loads the system drives and then looks for the root file system.
+Once the kernel is set up, it begins the systemd initialization system.
+systemd takes over and continues to mount the host’s file systems and start services.
+
+#########################################################################################################
+
+Status Code
+
+Z-> zombie process
+
+Please add you reseach on this topic  here
+#########################################################################################################
+
+How a priority of a process is set
+
+The OS determines the priority of a process based on a 'nice' value, which by default is 0 and ranges between -20(most favourable ) to 19(least favourable) .
+Well-beahved program are termed as nice, these are those programs that perform short burst of work and pause for input rather than continually hog the processor by doing some calcutions or asking for some resources.
+Program which run without pausing get the lower priority and program that pauses are rewared with higher priority.
+
+
+The priority of a program can be adjusted by using the following: 
+
+1. nice -> it increases the nice value by 10 and hence lowering the priority of the program 
+	Command : nice <program name>
+2. renice -> it assigns the new nice vaue to the program.
+	Comand : renice <new value(-20 to 19)> <PID> 
+
+#########################################################################################################
+
+Scheduling aglo used by linux
+
+By default linux uses CFS(completely fair share) scheduler.
+
+It divided the physical power of the cpu eqaully among the running process i.e., if 2 process are runningat a time work done by both will be same.
+Red black tree data structure is used for implementing this.
+
+DOUBT--> one source says, it gives cycle to process with highest cpu time first whereas as other says it gives cycle to process with lower cpu time required first.
+
+#########################################################################################################
